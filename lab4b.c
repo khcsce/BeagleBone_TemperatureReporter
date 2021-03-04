@@ -27,6 +27,8 @@
 #define B 4275 // thermistor value
 #define R0 100000.0 // nominal base value
 #define NS '\0'
+#define TAB '\t'
+#define SP ' '
 // Farenheit or Celsius
 char scale = 'F';
 // Option flags
@@ -136,9 +138,12 @@ int start_with(char *command,char *str){
 }
 
 void process_commands(char *command){
+	//https://piazza.com/class/kirz3jfa5jv7l7?cid=801
+	// 1) poll for stdin, read into buffer
+	//2) parse different lines in buffer, skipping spaces and tabs ONLY AT BEGINNING of each line
 	command[strlen(command) - 1] = NS;
-	while (*command == ' '){
-		command++;
+	while (*command == SP || *command == TAB){
+		command++; // skip space and tabs !!!!
 	}
 	if(equal_command(command,"SCALE=F")){
 		print(command);
