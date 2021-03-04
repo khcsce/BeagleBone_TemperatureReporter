@@ -1,0 +1,21 @@
+NAME: Khoa Quach
+EMAIL: khoaquachschool@gmail.com
+ID: 105123806
+
+Content:
+lab4b-105123806.tar.gz which contains:
+lab4b.c ... source code for button and temperature sensor implementation on green beaglebone
+README (this file)
+Makefile
+
+Makefile: 
+default ... builds lab1a exec, 
+clean ... deletes files created by the Makefile
+dist ... builds a distribution tarball of files: lab1a.c, Makefile, READ, lab1a-105123806.tar.gz
+
+Testing methodology:
+Running ./lab4b with different options
+typing STOP, START, SCALE=C, SCALE=F, OFF during the run to see if expected behavior are shown
+
+Sources:
+TA slides were a very huge help. The sample code was used and structured the code for me!!!
